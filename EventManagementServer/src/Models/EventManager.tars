@@ -1,0 +1,17 @@
+#include "DataService.tars"
+
+module EventGadget {
+    interface EventManager {
+        int GetPlanetList(int index, string wxId, out int nextIndex, out vector<PlanetInfo> planetInfoList, out int RetCode);
+        int JoinPlanet(string wxId, string planetId, out int RetCode);
+
+        int CreateProposal(string wxId, ProposalInfo proposalInfo, out int RetCode);
+        int GetProposalList(int index, string wxId, string planetId, out int nextIndex, out vector<map<string, string>> proposalList);
+        int UpdateProposal(ProposalInfo proposalInfo, out int RetCode);
+        int DeleteProposal(string proposalId, out int RetCode);
+
+        int GetEventList(int index, string wxId, string planetId, out int nextIndex, out vector<map<string, string>> eventList);
+        int GetEventDetail(string eventId, out EventInfo eventInfo);
+        int GetEventParticipant(int index, string eventId, out int nextIndex, out vector<EventRecord> participantList);
+    };
+};

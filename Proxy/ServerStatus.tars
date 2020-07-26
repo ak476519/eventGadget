@@ -1,0 +1,17 @@
+module EventGadget {
+    enum ErrorCode
+    {
+        SUCCESS          = 200,
+        USEREXIST        = 301001,
+        PHONEEXIST       = 301002,
+        PLANETEXIST      = 301003,
+        USERPROPOSED     = 301005,
+        EVENTEXIST       = 301006,
+        RECORDEXIST      = 301007,
+        USERNOTEXIST     = 404001,
+        PLANETNOTEXIST   = 404002,
+        EVENTNOTEXIST    = 404004,
+        RECORDNOTEXIST   = 404006,
+        SERVERERROR      = 500,
+    };
+};
